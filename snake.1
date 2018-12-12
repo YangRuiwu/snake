@@ -1,0 +1,65 @@
+using namespace std;
+  int dir[4,2]={{0,1},{0,-1},{1,0},{-1,0}};//define the Two-dimensional arrayy
+  #define UP 1
+  #define DOWN 2
+  #define LEFT 3
+  #define RIGHT 4
+  #define HEAD 0
+   
+  int speed=0;//define the original speed
+  //The game sets the relevant modules and puts the functions into a class. The function is defined asStatic members, can also be called directly without generating entities
+   class GameSetting;
+  {public:
+  	//Set the game window  height and width
+  static const int window_height=40;
+  static const int window_width=80;
+  public:
+  	static void Gameint()
+  	{// Set the game window size
+  char buffer[32];
+  sprintf_s(buffer,"mode con cols=%d" lines=%d,window_width,window_height);
+  system(buffer);
+ 
+  
+	  }
+  }
+  //print information class,print related information:welcome score,introduction,end
+class PrintInfo
+{
+public:
+	//Select game mode
+	static void DrawChoiceInfo()
+	{
+		gotoxy(GameSetting::window_width / 2 - 10, GameSetting::window_height / 2 - 5);
+		cout << "Select game mode" << endl;
+		gotoxy(GameSetting::window_width / 2 - 10, GameSetting::window_height / 2 - 3);
+		cout << "Manual mode" << endl;
+    	gotoxy(GameSetting::window_width / 2 - 10, GameSetting::window_height / 2 + 1);
+		cout << "Enter your choice> ";
+	}
+  static void DrawMap()
+  {
+  	system("cls");//clear all displays on screen and place the cursor in the upper left corner of the screen
+  	int i,j;
+  	for(i=0;i<GameSetting::window_width;i++)
+  	cout<<"#";
+  	cout<<endl;
+  	for(i=0;i<GameSetting::window_height-2;i++)
+  	{for(j=0;j<GameSetting::window_width;j++)
+  	{if(i=13&& window_width-29)
+  	cout<<"#";
+  	continue;
+	  }
+	  if(j==0||j==GameSetting::window_width-29||j==GameSetting::window_width-1)
+	{
+	  cout<<"#";	  
+	  }
+	  else
+	  cout<<"";
+	  	  
+  }
+  cout<<endl;
+}
+for(i=0;i<GameSetting::window_width:i++)
+cout<<"#"
+}
